@@ -7,13 +7,11 @@ public class InputManager : MonoBehaviour
     //player controls
     private PlayerControls playerControls;
     public Vector2 movementInput;
+    public float verticalInput;
+    public float horizontalInput;
 
     //Animator
     private Animator playerAnim;
-
-    //PlayerStats
-    [Range(0,15)]
-    public float speed;
     private void OnEnable()
     {
         if (playerControls == null)
@@ -34,10 +32,16 @@ public class InputManager : MonoBehaviour
         playerAnim = GetComponentInChildren<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HandleAllInput()
     {
-
+        HandleMovementInput();
     }
+    // Update is called once per frame
+    private void HandleMovementInput() 
+    {
+        verticalInput = movementInput.y;
+        horizontalInput = movementInput.x;
+    }
+
 
 }
