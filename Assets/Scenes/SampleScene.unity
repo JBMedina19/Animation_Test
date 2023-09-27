@@ -576,10 +576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4860054a17cd44e4c9aab18192c1cc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputManager: {fileID: 0}
-  moveDirection: {x: 0, y: 0, z: 0}
-  cameraObject: {fileID: 0}
-  playerRigidBody: {fileID: 0}
 --- !u!136 &778160603
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -682,10 +678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 778160596}
-  inputManager: {fileID: 0}
-  playerLocomotion: {fileID: 0}
-  movementSpeed: 1
-  rotationSpeed: 1
+  movementSpeed: 5
+  rotationSpeed: 50
 --- !u!4 &1022835055
 Transform:
   m_ObjectHideFlags: 0

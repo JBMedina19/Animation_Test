@@ -19,6 +19,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void HandleAllMovement()
     {
+        //private methods
         HandleMovement();
         HandleRotation();
     }
