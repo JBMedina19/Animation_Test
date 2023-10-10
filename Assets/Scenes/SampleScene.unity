@@ -708,6 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 778160596}
+<<<<<<< HEAD
   playerRigidBody: {fileID: 0}
   animator: {fileID: 0}
   inputManager: {fileID: 0}
@@ -717,6 +718,10 @@ MonoBehaviour:
   rotationSpeed: 10
   walkingSpeed: 0
   SprintingSpeed: 0
+=======
+  movementSpeed: 5
+  rotationSpeed: 50
+>>>>>>> 259c762a25d8a7ab42e4955f77897da3ae8946f2
 --- !u!4 &1022835055
 Transform:
   m_ObjectHideFlags: 0
