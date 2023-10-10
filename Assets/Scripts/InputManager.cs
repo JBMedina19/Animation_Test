@@ -10,8 +10,8 @@ public class InputManager : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
 
-    //Animator
-    private Animator playerAnim;
+    //new script
+    public float moveAmount;
     private void OnEnable()
     {
         if (playerControls == null)
@@ -27,10 +27,6 @@ public class InputManager : MonoBehaviour
         playerControls.Disable();
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        playerAnim = GetComponentInChildren<Animator>();
-    }
 
     public void HandleAllInput()
     {
@@ -41,6 +37,10 @@ public class InputManager : MonoBehaviour
     {
         verticalInput = movementInput.y;
         horizontalInput = movementInput.x;
+        //new Script
+        //clamps between 0 to 1 and Abs for it to make it always a positive
+        moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
+        PlayerManager.Instance.animatorManager.UpdateAnimatorValues(0, moveAmount);
     }
 
 
